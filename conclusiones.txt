@@ -1,0 +1,26 @@
+==========================================================
+REPORTE DE CONCLUSIONES - PRUEBA DE CARGA (LOGIN)
+==========================================================
+
+1. RESULTADOS CLAVE:
+-------------------
+- Rendimiento (Throughput): 32.09 TPS (Transacciones por Segundo).
+- Tiempo de respuesta (P95): 475.12 ms.
+- Tasa de error (Error Rate): 0.00%.
+- Total de peticiones: 1,968 exitosas.
+
+2. HALLAZGOS TÉCNICOS:
+---------------------
+- CUMPLIMIENTO DE TPS: Se sobrepasó con éxito el objetivo de 20 TPS, alcanzando una tasa de 32.09/s bajo una carga constante de 45 VUs. Esto representa un margen de seguridad del 60% sobre el requerimiento inicial.
+
+- ESTABILIDAD DE LATENCIA: Se destaca la mínima varianza entre los percentiles P90 (438.92ms) y P95 (475.12ms). La ausencia de un desfase significativo entre estos valores confirma la estabilidad del servicio y la inexistencia de "outliers" o degradación por encolamiento de peticiones.
+
+- VALIDACIÓN DE SLAs: Se cumplieron estrictamente todos los criterios de aceptación:
+  * El P95 se mantuvo un 68% por debajo del límite máximo permitido (1500ms).
+  * La tasa de error fue nula (0%), cumpliendo con el umbral de tolerancia (<3%).
+
+3. CONCLUSIÓN FINAL:
+-------------------
+El servicio de login es apto para soportar la carga solicitada. Los resultados demuestran un comportamiento predecible y robusto, garantizando una experiencia de usuario fluida y estable bajo los parámetros de tráfico evaluados.
+
+==========================================================
